@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+ void multiple_result(int arr[],int n,int target,int result[],int &size_of_reult){
+  size_of_reult=0;
+   for(int i=0;i<n;i++){
+    if(arr[i]==target){
+        result[size_of_reult++]=i;
+
+    }
+
+
+   }
+
+}
+
+int main(){
+    int n;cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+
+    }
+    int target;cin>>target;
+    int result[n];
+    int size_of_result;
+    multiple_result(arr,n,target,result,size_of_result);
+
+    if(size_of_result>0){
+        cout<<"[";
+        for(int i=0;i<size_of_result;i++){
+            cout<<result[i]<<" ";
+
+        }
+        cout<<"]";
+    }
+    else{
+        cout<<"[]"<<endl;
+
+    }
+}
